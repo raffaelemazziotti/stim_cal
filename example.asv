@@ -1,0 +1,24 @@
+
+
+spatial_freq = 0.5; % spatial frequency cyc/deg
+angle_deg = 0; % orientation in deg
+phase = 0; % grating phase
+
+% monitor specs
+params.sz.width = 12; %cm
+params.sz.height = 12;  %cm
+params.res.width = 600;
+params.res.height = 600;
+params.vdist = 57;
+config = visang(params);
+
+[x,y]=meshgrid(-300:300,-300:300);
+
+fr = spatial_freq*config.width.degperpix*2*pi % cycles for pixel
+angle=angle_deg * pi / 180; 
+
+m = sin( (cos(angle)*fr) *x + (sin(angle)*fr) * y + phase);
+
+
+
+imagesc(m)
