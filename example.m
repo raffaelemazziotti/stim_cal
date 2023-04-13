@@ -2,7 +2,7 @@
 
 spatial_freq = 0.5; % spatial frequency cyc/deg
 angle_deg = 0; % orientation in deg
-phase = 0; % grating phase in rad
+phase = 0; % grating phase in rad 
 
 % monitor specs
 params.sz.width = 12; % width of image in cm
